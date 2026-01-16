@@ -1,12 +1,14 @@
 import { searchPokemon } from './searchApi.js';
 import { showPokemon } from './pokemonShower.js';
+import { pokemonLister } from './pokemonLister.js';
 
 console.log("main is running")
-console.log(showPokemon());
+
 
 
 const searchInput = document.getElementById("searchPokemon");
 const searchButton = document.getElementById("srch-btn");
+const result = document.getElementById("search-result");
 let pokemonName = " ";
 
 
@@ -14,6 +16,15 @@ let pokemonName = " ";
 document.addEventListener("DOMContentLoaded", () => {
 
     console.log("DOM fully loaded and parsed");
+
+
+    //this part shows the list of all pokemons when the page loads
+
+    pokemonLister();
+
+
+
+
     //This event Listener will wait fot the button to be clicked  and activate the 
     //search function, if the search input is empty it will log a message to the console
 
@@ -23,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (pokemonName === "") {
             console.log("the input is empty");
+            result.innerHTML = "<h2 class='no-found'>Please enter a Pokemon name.</h2>";
+            searchInput.value = "";
+
         } else {
             const pokemon = searchPokemon(pokemonName);
 
@@ -35,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
 
                 console.log("Pokemon found");
-                const data = await pokemon;
+                const data = pokemon ? await pokemon : pokemonName;
                 console.log("data returned: ", data);
                 showPokemon(data);
                 searchInput.value = "";
