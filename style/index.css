@@ -34,6 +34,12 @@
       padding: 1.7rem 5px;
       border: none;
       border-radius: 5px;
+
+
+      -webkit-appearance: none;
+      -webkit-box-shadow: none;
+      -moz-appearance: none;
+      appearance: none;
    }
 
    #searchPokemon::placeholder {
@@ -42,10 +48,6 @@
 
    }
 
-   #searchPokemon::placeholder {
-      font-family: Verdana;
-      font-size: 12px;
-   }
 
    #search-result {
       flex-basis: 5rem;
