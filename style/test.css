@@ -8,7 +8,7 @@
 
 .pokemon-info {
     background-color: lightgreen;
-    flex-grow: 1;
+
     margin: 5px;
     display: flex;
     justify-content: center;
