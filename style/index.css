@@ -1,109 +1,150 @@
-* {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-}
+   * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+   }
 
-body {
-   height: calc(100vh - 50px);
-   width: 100%;
-   position: relative;
-   font-family: Arial, Helvetica, sans-serif;
+   body {
+      height: calc(100vh - 50px);
+      width: 100%;
+      position: relative;
+      font-family: Arial, Helvetica, sans-serif;
 
-}
+   }
 
-.search-container {
-   border: 2px dotted green;
-   background-color: #3a3aff;
-   padding: 1.2rem;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   gap: 1rem;
-}
+   .search-container {
+      border: 2px dotted green;
+      background-color: #3a3aff;
+      padding: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+   }
 
-.icon {
-   width: 100px;
-   height: 100px;
-   /* border: 1px solid red; */
-}
+   .icon {
+      width: 100px;
+      height: 100px;
 
-#searchPokemon {
-   width: 80%;
-   height: 2rem;
-   padding: 1.7rem 5px;
-   border: none;
-   border-radius: 5px;
-}
+   }
 
-#searchPokemon::placeholder {
-   font-family: Verdana;
-   font-size: 12px;
-}
+   #searchPokemon {
+      width: 80%;
+      height: 2rem;
+      padding: 1.7rem 5px;
+      border: none;
+      border-radius: 5px;
+   }
 
-#search-result {
-   height: calc(100vh - 70px);
-   width: 100%;
-   overflow-y: auto;
-}
+   #searchPokemon::placeholder {
+      font-family: Verdana;
+      font-size: 12px;
+      border: 1px solid red;
+   }
 
-#srch-btn {
-   padding: 1rem 1rem;
-   border: none;
-   margin: 0 2rem;
-   border-radius: 15px;
-   background-color: #f9f9fb;
-}
+   #searchPokemon::placeholder {
+      font-family: Verdana;
+      font-size: 12px;
+   }
 
-footer {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   background-color: #3a3aff;
-   /* position: absolute; */
-   width: 100%;
-   padding: 0 2rem;
-}
+   #search-result {
+      flex-basis: 5rem;
+      height: calc(100vh - 70px);
+      width: 100%;
+      overflow-y: auto;
+   }
 
+   #srch-btn {
+      padding: 1rem 1rem;
+      border: none;
+      margin: 0 2rem;
+      border-radius: 15px;
+      background-color: #f9f9fb;
 
-.no-found {
-   color: red;
-   text-align: center;
-   margin-top: 2rem;
-}
+   }
 
-.pokemon-card {
-   padding: 1rem;
-   border: 1px solid gray;
-   margin: 10px 20px;
-   text-align: center;
-   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-   border-radius: 10px;
+   #srch-btn::before {
+      content: 'search';
+   }
 
-}
+   footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #3a3aff;
+      /* position: absolute; */
+      width: 100%;
+      padding: 2rem 2rem;
+   }
 
-.pokemon-info {
-   display: flex;
-   gap: 1rem;
-   padding: 1rem;
+   footer p {
+      margin-top: 1rem;
+      color: white;
+   }
 
-}
+   .no-found {
+      color: red;
+      text-align: center;
+      margin-top: 2rem;
+   }
 
-.pokemon-card img {
-   width: 200px;
-   height: 200px;
-}
-.pokemon-list-item{
-   display: flex;
-   align-items: center;
-   gap: 1rem;
-   /* border: 1px solid gray; */
-   border-radius: 5px;
-   margin: 5px 10px;
-   box-shadow: 0px 0px 4px black;
-}
+   .pokemon-card {
+      padding: 1rem;
+      border: 1px solid gray;
+      margin: 10px 20px;
+      text-align: center;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
 
-.pokemon-list-item img{
-   padding: 0.5rem;
-}
+   }
+
+   .pokemon-list-item {
+      display: flex;
+      border: 1px solid black;
+      margin: 10px 20px;
+   }
+
+   .pokemon-info {
+      display: flex;
+      /* flex-direction: column; */
+      gap: 1rem;
+      padding: 1rem;
+
+   }
+
+   .pokemon-info img {
+      width: 150px;
+      height: 150px;
+   }
+
+   .pokemon-card img {
+      width: 200px;
+      height: 200px;
+   }
+
+   @media (max-width: 600px) {
+      #search-container {
+         position: relative;
+         padding: 1rem;
+      }
+
+      #srch-btn {
+         padding: 0.5rem;
+         width: 50px;
+         background-color: transparent;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: absolute;
+         right: 1px;
+         left: auto;
+      }
+
+      #srch-btn::before {
+         content: url('../assets/search-icon.svg');
+         background-repeat: no-repeat;
+         background-position: center;
+         font-size: 1.2rem;
+      }
+   }

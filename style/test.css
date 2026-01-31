@@ -1,0 +1,52 @@
+.pokemon-list-item {
+    background-color: lightblue;
+    display: flex;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-info {
+    background-color: lightgreen;
+    flex-grow: 1;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.more-info {
+    background-color: aqua;
+    flex-grow: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+.more-info h3 {
+    overflow-wrap: break-word;
+    margin-block: 10px;
+    margin-inline: 5px;
+    font-size: 30px;
+}
+
+.more-info p {
+    overflow-wrap: inherit;
+    margin-block: 10px;
+    margin-inline: 10px;
+}
+
+.additional-info {
+
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}

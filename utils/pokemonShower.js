@@ -1,6 +1,7 @@
 const result = document.getElementById("search-result");
 
 function showPokemon(pokemon) {
+
     result.innerHTML = "";
     const pokemonDiv = document.createElement("div");
 
