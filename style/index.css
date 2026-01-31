@@ -15,7 +15,7 @@
    .search-container {
       border: 2px dotted green;
       background-color: #3a3aff;
-      padding: 1.2rem;
+      padding: 1.1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -36,10 +36,10 @@
       border-radius: 5px;
 
 
-      -webkit-appearance: none;
+      /* -webkit-appearance: none;
       -webkit-box-shadow: none;
       -moz-appearance: none;
-      appearance: none;
+      appearance: none; */
    }
 
    #searchPokemon::placeholder {
@@ -77,7 +77,7 @@
       background-color: #3a3aff;
       /* position: absolute; */
       width: 100%;
-      padding: 2rem 2rem;
+      padding: 2rem 1.5rem;
    }
 
    footer p {
@@ -125,7 +125,7 @@
       height: 200px;
    }
 
-   @media (max-width: 600px) and (max-width: 500px) {
+   @media (max-width: 600px) or (max-width: 500px) {
       #search-container {
          position: relative;
          padding: 1rem;
@@ -148,5 +148,15 @@
          background-repeat: no-repeat;
          background-position: center;
          font-size: 1.2rem;
+      }
+
+      .pokemon-info {
+         flex-grow: 1;
+         margin: 1rem;
+         flex-basis: 250px;
+      }
+
+      .pokemon-list-item {
+         flex-direction: column;
       }
    }

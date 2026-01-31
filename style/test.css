@@ -1,5 +1,5 @@
 .pokemon-list-item {
-    background-color: lightblue;
+    background-color: rgb(42, 120, 146);
     display: flex;
     border-radius: 15px;
     border: none;
@@ -8,23 +8,23 @@
 }
 
 .pokemon-info {
-    background-color: lightgreen;
-
-    margin: 5px;
+    background-color: rgb(216, 219, 216);
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
 
 .more-info {
-    background-color: aqua;
-    flex-grow: 1;
-    margin: 10px;
+    background-color: #3a3aff;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0.5rem;
+    margin: 10px;
 }
 
 .more-info h3 {
@@ -32,22 +32,32 @@
     margin-block: 10px;
     margin-inline: 5px;
     font-size: 30px;
+    color: white;
 }
 
 .more-info p {
     overflow-wrap: inherit;
     margin-block: 10px;
     margin-inline: 10px;
+    color: white;
 }
 
 .additional-info {
 
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: transparent;
+    text-decoration: underline;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
     margin: 10px;
+
+}
+
+.additional-info:hover {
+    background-color: #278ee2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
 }
