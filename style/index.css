@@ -93,12 +93,8 @@
 
    .pokemon-card {
       padding: 1rem;
-      border: 1px solid gray;
       margin: 10px 20px;
       text-align: center;
-      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-
    }
 
    .pokemon-list-item {

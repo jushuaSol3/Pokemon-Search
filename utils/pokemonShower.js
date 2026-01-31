@@ -1,13 +1,19 @@
 const result = document.getElementById("search-result");
-
+const pokemonDiv = document.createElement("div");
+pokemonDiv.classList.add("pokemon-container");
 function showPokemon(pokemon) {
 
     result.innerHTML = "";
-    const pokemonDiv = document.createElement("div");
+
 
     if (pokemon === undefined) {
         console.log("working here");
-        pokemonDiv.innerHTML = `<h2 class='no-found'>No Pokemon found. Please try again.</h2>`;
+        pokemonDiv.innerHTML = `
+        <div class="pokemon-card">
+        <h2 class='no-found'>No Pokemon found. Please try again.</h2>
+        <img class="no-found" src="../assets/pikachu.svg"  />
+        </div>
+        `;
 
         result.appendChild(pokemonDiv);
         return pokemonDiv;
